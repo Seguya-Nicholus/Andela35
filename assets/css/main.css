@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+.flex-container{
+    display: flex;
+    background-color: white;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-container > div{
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.flex_left_side{
+    width: 25%;
+    float: left;
+    align-content: left;
+    padding: 15px;
+}
+
+.flex_middle {
+    width: 40%;
+    float: center;
+    align-content: center;
+    padding: 15px;
+}
+
+.flex_right_side {
+    width: 50%;
+    float: right;
+    align-content: center;
+    padding: 15px;
+}
+
+.button-signup {
+    background-color:  #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 100%;
+    border-radius: 25px;
+    margin-left:auto;
+    margin-right:auto;
+    justify-content: center;
+}
+
+.button-login {
+    background-color: white; /* white */
+    color: dodgerblue;
+    border: 2px solid dodgerblue; /* blue */
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 100%;
+    border-radius: 25px;
+    justify-content: center;
+}
+.button-menu {
+    background-color:  #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 100%;
+    border-radius: 25px;
+    margin-left:auto;
+    margin-right:auto;
+    justify-content: left;
+}
+
+#flex-button{
+    justify-content: center;
+    align-items: center;
+}
+
+.button-signup:hover{
+    background-color: rgb(62, 63, 63); /* Green */
+    color: white;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.button-login:hover{
+    background-color: rgb(62, 63, 63); /*  */
+    color: white;
+    opacity: 1;
+    cursor: pointer;
+}
+
+h1 { 
+    display: block;
+    font-size: 40px;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+h3 { 
+    display: block;
+    font-size: 20px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: normal;
+}
+
+
+
+@media(max-width:600px){
+    h3 { 
+        display: block;
+        font-size: 15px;
+        
+    }
+
+    h1 { 
+        display: block;
+        font-size: 20px;
+    }
+
+    .button-login {
+        background-color: white; /* white */
+        color: dodgerblue;
+        border: 2px solid dodgerblue; /* blue */
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+       
+    }
+
+    .button-signup {
+        background-color: dodgerblue; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+    }
+
+}
