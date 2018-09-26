@@ -4,52 +4,96 @@
 <head>
     <title>ToDoListApp - Welcome</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/main1.css">
+    <link rel="stylesheet" href="assets/css/main2.css">
 </head>
+
 <body>
-    <ul>
-        <li><a href="">ToDoList App</a></li>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="">Features</a></li>
-    </ul>
-
-    <div class="flex-container">
-        <div class="flex_left_side">
-            
-          
-                    <a href="signup.html">
-                        <button type="submit" class="button-menu" id="flex-button">Create New ToDo List</button>
-                    </a>
-                    <br><br>
-                    <a href="signup.html">
-                        <button type="submit" class="button-menu" id="flex-button">View All ToDo Lists</button>
-                    </a>
-                    <br><br>
-                    <a href="signup.html">
-                        <button type="submit" class="button-menu" id="flex-button">My Profile</button>
-                    </a>
-                    <br><br><a href="signup.html">
-                            <button type="submit" class="button-menu" id="flex-button">Logout</button>
-                        </a>
-
-           
-            
-
-        </div>
-        <div class="flex_middle">
-            <div id="myDIV" class="header">
-                <h2 style="margin:5px">My To Do List</h2>
-                <input type="text" id="myInput" placeholder="Title...">
-                <input type="text" id="myInput" placeholder="Add ToDo List Item...">
-                <span onclick="newElement()" class="addBtn">Add</span>
+    
+            <ul class="top">
+                <li id="AppTitle">ToDoList App</li>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        
+    
+        <div class="flex-container">
+            <div class="flex_middle">
+                    <!-- <div id="myDIV" ></div> -->
+                        <h1 style="margin:5px"> Create a To Do List</h1>
+                        <hr>
+                        <input type="text" id="myInput" placeholder="Add ToDo List Item..."> <span onclick="newElement()" class="addBtn">Add
+                            Item</span>                   
+                    
+                    <ul id="myUL" class="ToDo">
+                        <li>Hit the gym</li>
+                        <li class="checked">Pay bills</li>
+                        <li>Meet George</li>
+                        <li>Buy eggs</li>
+                        <li>Read a book</li>
+                        <li>Organize office</li>
+                    </ul>
+                
+                <!-- <ul id="incomplete-tasks" class="list">
+                    <li><input type="checkbox"><label>Pay Bills</label><button class="edit">Edit</button><button class="delete">Delete</button></li>
+                    <li class="editMode"><input type="checkbox"><label>Go Shopping</label><button class="edit">Edit</button><button class="delete">Delete</button></li>
+                </ul> -->
             </div>
         </div>
-        <div class="flex_extreme_right_side">
-
-        </div>
-    </div>
-
+        <script>
+                // Create a "close" button and append it to each list item
+                var myNodelist = document.getElementsByTagName("LI");
+                var i;
+                for (i = 0; i < myNodelist.length; i++) {
+                  var span = document.createElement("SPAN");
+                  var txt = document.createTextNode("\u00D7");
+                  span.className = "close";
+                  span.appendChild(txt);
+                  myNodelist[i].appendChild(span);
+                }
+                
+                // Click on a close button to hide the current list item
+                var close = document.getElementsByClassName("close");
+                var i;
+                for (i = 0; i < close.length; i++) {
+                  close[i].onclick = function() {
+                    var div = this.parentElement;
+                    div.style.display = "none";
+                  }
+                }
+                
+                // Add a "checked" symbol when clicking on a list item
+                var list = document.querySelector('ul');
+                list.addEventListener('click', function(ev) {
+                  if (ev.target.tagName === 'LI') {
+                    ev.target.classList.toggle('checked');
+                  }
+                }, false);
+                
+                // Create a new list item when clicking on the "Add" button
+                function newElement() {
+                  var li = document.createElement("li");
+                  var inputValue = document.getElementById("myInput").value;
+                  var t = document.createTextNode(inputValue);
+                  li.appendChild(t);
+                  if (inputValue === '') {
+                    alert("You must write something!");
+                  } else {
+                    document.getElementById("myUL").appendChild(li);
+                  }
+                  document.getElementById("myInput").value = "";
+                
+                  var span = document.createElement("SPAN");
+                  var txt = document.createTextNode("\u00D7");
+                  span.className = "close";
+                  span.appendChild(txt);
+                  li.appendChild(span);
+                
+                  for (i = 0; i < close.length; i++) {
+                    close[i].onclick = function() {
+                      var div = this.parentElement;
+                      div.style.display = "none";
+                    }
+                  }
+                }
+                </script>
 </body>
-
 </html>
