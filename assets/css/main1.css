@@ -75,7 +75,6 @@ a{
 }
 
 /*Menu Bar*/
-
 ul{
     list-style-type: none;
     margin: 0;
@@ -87,6 +86,7 @@ ul{
 
 li{
     float: left;
+    background-color:#4caf50;
 }
 
 li a{
@@ -98,11 +98,12 @@ li a{
 }
 
 li a:hover{
-    background-color:#4caf50;
+    background-color:dodgerblue;
 }
 
 #li-float_right{
     float: right;
+    background-color:#4caf50;
 }
 
 #li{
@@ -123,7 +124,7 @@ li a:hover{
     float: left;
     padding: 10px;
 }
-#nav {
+/* #nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -143,7 +144,7 @@ li a:hover{
     background-color: #0099cc;
 }
 /* Style the "Add" button */
-.addBtn {
+/* .addBtn {
     padding: 10px;
     width: 25%;
     background:black ;
@@ -158,10 +159,10 @@ li a:hover{
   
   .addBtn:hover {
     background-color: #4caf50;
-  }
+  } */
 
   /* Style the input */
-input {
+/* input {
     margin: 0;
     border: none;
     border-radius: 0;
@@ -169,14 +170,8 @@ input {
     padding: 10px;
     float: left;
     font-size: 16px;
-}
-/* Style the header */
-.header {
-    background-color: #f44336;
-    padding: 30px 40px;
-    color: white;
-    text-align: center;
-}
+} */
+
 
 /* Clear floats after the header */
 .header:after {
@@ -184,7 +179,6 @@ input {
     display: table;
     clear: both;
 }
-
 
 /* Mobile Phone */
 
