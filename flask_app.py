@@ -53,30 +53,3 @@ def post_user_detials():
 # If we're running in stand alone mode, run the application
 if __name__ == '__main__':
     app.run(debug=True)
-
-# @app.route("/")
-# def main():
-#     return "Hello World !"
-
-
-# @app.route('/login')
-# def login():
-#     return 'login'
-
-# @app.route('/levelup')
-# def ahdgah():
-#     return name
-
-# @pp.route('/tasks',methods=['POST','GET'])
-# def tasks():
-#     if request.method == 'GET':
-#         return jsonify
-
-# @app.route('/<string:name>')
-# def hello(name):
-#     return "Hello " + name
-
-
-# if __name__ == '__main__':
-#     # name = "Seguya Nicholus"
-#     app.run()
